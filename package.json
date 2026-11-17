@@ -1,0 +1,46 @@
+{
+  "name": "doogy-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DOOGY 智能项圈与宠物照护后端，本地可运行 MVP",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node --check web/api.mjs && node --check web/app.mjs && node --check web/history.mjs",
+    "start": "node --env-file-if-exists=.env dist/src/main.js",
+    "start:all": "node --env-file-if-exists=.env dist/scripts/start.js",
+    "worker": "node --env-file-if-exists=.env dist/src/worker-main.js",
+    "demo:mvp": "npm run build && node dist/scripts/mvp-demo.js",
+    "import:offline": "node --env-file-if-exists=.env dist/scripts/import-offline.js",
+    "simulate:device": "node --env-file-if-exists=.env dist/scripts/simulate-device.js",
+    "provision": "node --env-file-if-exists=.env dist/scripts/provision.js",
+    "export:account": "npm run build && node --env-file-if-exists=.env dist/scripts/export-account.js",
+    "privacy:maintain": "npm run build && node --env-file-if-exists=.env dist/scripts/privacy-maintenance.js",
+    "backup:managed": "npm run build && node --env-file-if-exists=.env dist/scripts/managed-backup.js",
+    "db:backup": "node --env-file-if-exists=.env dist/scripts/backup-db.js",
+    "db:restore": "node --env-file-if-exists=.env dist/scripts/restore-db.js",
+    "db:prepare": "node --env-file-if-exists=.env dist/scripts/prepare-db.js",
+    "db:import-postgres": "node --env-file-if-exists=.env dist/scripts/migrate-postgres.js",
+    "postgres:up": "docker compose -f compose.postgres.yml up -d --wait",
+    "postgres:stop": "docker compose -f compose.postgres.yml stop",
+    "postgres:backup": "node --env-file-if-exists=.env.postgres dist/scripts/backup-postgres.js",
+    "postgres:restore": "node --env-file-if-exists=.env.postgres dist/scripts/restore-postgres.js"
+  },
+  "dependencies": {
+    "@nestjs/common": "^12.5.1",
+    "@nestjs/core": "^12.5.1",
+    "@nestjs/platform-express": "^12.5.1",
+    "@nestjs/swagger": "^12.0.0",
+    "pg": "^8.23.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.23.1",
+    "typescript": "^5.9.0"
+  }
+}

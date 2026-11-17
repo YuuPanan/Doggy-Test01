@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#244b3e">
+  <title>DOOGY · 伴宠日常</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23244b3e'/%3E%3Ctext x='8' y='29' font-size='28' fill='%23fff'%3E♡%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/app/styles.css">
+  <script type="module" src="/app/app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-paw" viewBox="0 0 32 32"><ellipse cx="7" cy="11" rx="3" ry="4" transform="rotate(-24 7 11)"/><ellipse cx="13" cy="7" rx="3" ry="4"/><ellipse cx="21" cy="8" rx="3" ry="4" transform="rotate(14 21 8)"/><ellipse cx="26" cy="14" rx="3" ry="4" transform="rotate(28 26 14)"/><path d="M10 20c2-7 9-9 13-2 6 8-2 10-6 8-5 4-13 1-7-6Z"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3Z"/><path d="M9 20v-7h6v7"/></symbol>
+    <symbol id="i-care" viewBox="0 0 24 24"><path d="M20 5a5 5 0 0 0-8 1 5 5 0 0 0-8-1c-5 5 3 11 8 15 5-4 13-10 8-15Z"/><path d="M8 11h8m-4-4v8"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M2 13h5l3-9 4 16 3-7h5"/></symbol>
+    <symbol id="i-device" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="4"/><path d="M10 6h4m-3 12h2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7a9 9 0 1 0 1 9M20 3v5h-5"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M5 17h14l-2-4V9A5 5 0 0 0 7 9v4ZM10 21h4"/></symbol>
+  </svg>
+  <div id="app" aria-busy="true"><div class="initial-loading">正在连接伴宠日常…</div></div>
+  <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+  <dialog id="modal" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <noscript>伴宠日常需要启用 JavaScript 才能登录并连接本地服务。</noscript>
+</body>
+</html>

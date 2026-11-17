@@ -1,0 +1,12 @@
+node_modules/
+dist/
+data/
+.env
+.env.*
+!.env.example
+!.env.postgres.example
+*.db
+*.db-shm
+*.db-wal
+coverage/
+*.log

@@ -1,0 +1,11 @@
+ALTER TABLE geofences ADD COLUMN dynamic_buffer INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE geofences ADD COLUMN min_buffer_m REAL NOT NULL DEFAULT 15;
+ALTER TABLE geofences ADD COLUMN min_exit_seconds INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE geofences ADD COLUMN min_enter_seconds INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE geofences ADD COLUMN rule_version INTEGER NOT NULL DEFAULT 1;
+ALTER TABLE geofence_states ADD COLUMN candidate_since TEXT;
+ALTER TABLE geofence_evaluations ADD COLUMN rule_version INTEGER NOT NULL DEFAULT 1;
+ALTER TABLE geofence_evaluations ADD COLUMN reason TEXT NOT NULL DEFAULT 'legacy';
+ALTER TABLE geofence_evaluations ADD COLUMN effective_buffer_m REAL;
+ALTER TABLE device_events ADD COLUMN processing_started_at TEXT;
+ALTER TABLE device_events ADD COLUMN processed_at TEXT;
